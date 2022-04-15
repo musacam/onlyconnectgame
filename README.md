@@ -24,3 +24,7 @@
 - [ ] Oyunla alakalı verileri topla. Gerekirse sen yap.
 - [ ] Oyuncuların olduğu ekran için avatar seçme olayı olsun eğlenceli olur.
 - [ ] E birisinin bunları yönetmesi lazım.
+
+### Zaman Yönetimi
+
+_15.04.2022_ - Ana ekrana giriş yapıldı, enteresan resimleri bulduk, daha da güzelleştirmeler yapılacak. 
