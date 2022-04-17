@@ -28,3 +28,5 @@
 ### Zaman Yönetimi
 
 _15.04.2022_ - Ana ekrana giriş yapıldı, enteresan resimleri bulduk, daha da güzelleştirmeler yapılacak. 
+
+_17.04.2022_ - Sayfalar ve yapılar farklı componentlara ayrıldı. Clue sayfasının temel hâli yapıldı. Kategoriden clue kısmına geçiş için şimdilik buton eklendi.
