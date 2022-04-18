@@ -9,14 +9,17 @@ import santelmoImg from "./Images/santelmo.png";
 import { Button } from "antd";
 import { clues } from "./data";
 
-function Categories({ setQuestionChosen }) {
+function Categories({ setQuestionChosen, setQuestion }) {
   const questions = Object.values(clues);
 
   const chooseCategory = () => {
     const randomQuestion =
       questions[Math.floor(Math.random() * questions.length)];
     console.log(randomQuestion);
-    setQuestionChosen(true);
+    setQuestion(randomQuestion);
+    setTimeout(() => {
+      setQuestionChosen(true);
+    }, 500);
   };
   return (
     <div className="categories">
@@ -24,19 +27,19 @@ function Categories({ setQuestionChosen }) {
         <Button type="primary" onClick={chooseCategory}>
           <img src={medusaImg}></img>
         </Button>
-        <Button type="primary">
+        <Button type="primary" onClick={chooseCategory}>
           <img src={griffinImg}></img>
         </Button>
-        <Button type="primary">
+        <Button type="primary" onClick={chooseCategory}>
           <img src={unicornImg}></img>
         </Button>
-        <Button type="primary">
+        <Button type="primary" onClick={chooseCategory}>
           <img src={werewolfImg}></img>
         </Button>
-        <Button type="primary">
+        <Button type="primary" onClick={chooseCategory}>
           <img src={cyclopsImg}></img>
         </Button>
-        <Button type="primary">
+        <Button type="primary" onClick={chooseCategory}>
           <img src={santelmoImg}></img>
         </Button>
       </div>

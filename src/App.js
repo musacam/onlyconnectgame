@@ -7,16 +7,21 @@ import { useState } from "react";
 
 function App() {
   const [questionChosen, setQuestionChosen] = useState(false);
-
-  console.log(questionChosen);
+  const [question, setQuestion] = useState(null);
 
   return (
     <div className="App">
       <MainScreen />
       {!questionChosen ? (
-        <Categories setQuestionChosen={setQuestionChosen} />
+        <Categories
+          setQuestionChosen={setQuestionChosen}
+          setQuestion={setQuestion}
+        />
       ) : (
-        <QuestionScreen setQuestionChosen={setQuestionChosen} />
+        <QuestionScreen
+          setQuestionChosen={setQuestionChosen}
+          connectionQ={question}
+        />
       )}
     </div>
   );
