@@ -7,7 +7,7 @@ function TimerBar() {
       <div style={{ width: "100vw" }}>
         <Progress
           type="line"
-          percent={70}
+          percent={50}
           showInfo={false}
           strokeColor="blue"
         />

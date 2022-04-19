@@ -32,3 +32,5 @@ _15.04.2022_ - Ana ekrana giriş yapıldı, enteresan resimleri bulduk, daha da 
 _17.04.2022_ - Sayfalar ve yapılar farklı componentlara ayrıldı. Clue sayfasının temel hâli yapıldı. Kategoriden clue kısmına geçiş için şimdilik buton eklendi.
 
 _18.04.2022_ - Hooksa hafif hafif giriş yapıldı. Host için butonlar eklendi. Todolar çıkarıldı. Timer mantığına giriş yapıldı.
+
+_20.04.2022_ - Olmadı bugün. Mantık basit hale döndü ki daha sonra daha fazla bilgi ile gelelim.
