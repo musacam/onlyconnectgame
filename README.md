@@ -34,3 +34,5 @@ _17.04.2022_ - Sayfalar ve yapılar farklı componentlara ayrıldı. Clue sayfas
 _18.04.2022_ - Hooksa hafif hafif giriş yapıldı. Host için butonlar eklendi. Todolar çıkarıldı. Timer mantığına giriş yapıldı.
 
 _20.04.2022_ - Olmadı bugün. Mantık basit hale döndü ki daha sonra daha fazla bilgi ile gelelim.
+
+_22.04.2022_ - Zaman ve clue component'ları daha düzgün işliyor. Sırada clue bulma kısmına geçebilirim diye düşünüyorum.
