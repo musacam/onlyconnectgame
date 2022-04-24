@@ -2,12 +2,16 @@
 ## TODO LIST
 ### İlk Aşama Oyun Ekranı
 ##### Oyun Seçim Ana Ekranı
-- [ ] 3 kullanıcının da olduğu üst ana ekran
-- [ ] Ekranın alt kısmı 6 kutulu, kutunun içi enteresan resimler
+:white_check_mark: 3 kullanıcının da olduğu üst ana ekran
+
+:white_check_mark: Ekranın alt kısmı 6 kutulu, kutunun içi enteresan resimler
 ##### Oyun Seçtikten Sonra
-- [ ] Oyuncu ekranı sabit kalmaya devam
-- [ ] 4 kutucuklu yer ayır
-- [ ] Her kutucuğun süresi belli
+:white_check_mark: Oyuncu ekranı sabit kalmaya devam
+
+:white_check_mark: 4 kutucuklu yer ayır
+
+:white_check_mark: Her kutucuğun süresi belli
+
 - [ ] Sıra hangi kutucuktaysa onun üzerinde puanı yazsın ve progress time bar şeklinde süresi olsun
 ### İkinci Aşama Oyun Ekranı (V2 ile gelebilir)
 - [ ] Codenames tarzında bir ekran
@@ -20,10 +24,13 @@
 - [ ] Her yanlış cevapta sıra rakibe mi geçiyor ona bir bak.
 ### Mantıksal ya da Akış Olarak Yapılması Gerekenler
 - [ ] Puanlama sistemini öğren ve uygula.
-- [ ] Zamanlama olayına kafa yor.
+
+:white_check_mark: Zamanlama olayına kafa yor.
+
 - [ ] Oyunla alakalı verileri topla. Gerekirse sen yap.
 - [ ] Oyuncuların olduğu ekran için avatar seçme olayı olsun eğlenceli olur.
-- [ ] E birisinin bunları yönetmesi lazım.
+
+:white_check_mark: E birisinin bunları yönetmesi lazım.
 
 ### Zaman Yönetimi
 

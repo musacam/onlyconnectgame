@@ -9,6 +9,9 @@ function QuestionScreen({ setQuestionChosen, connectionQ }) {
   const [element, setElement] = useState(1);
   const timer = useRef(null);
   const widthAnimationBox = useRef(null);
+  const timerBarWidthTwo = useRef(null);
+  const timerBarWidthThree = useRef(null);
+  const timerBarWidthFour = useRef(null);
 
   const newQuestion = () => {
     setQuestionChosen(false);
@@ -17,8 +20,17 @@ function QuestionScreen({ setQuestionChosen, connectionQ }) {
   const stopAnswer = () => {
     clearInterval(timer.current);
     clearInterval(widthAnimationBox.current);
-    document.getElementsByClassName("timerBar")[0].style.transition = "none";
-    document.getElementsByClassName("timerBar")[0].style.width = "100px";
+    clearInterval(timerBarWidthTwo.current);
+    clearInterval(timerBarWidthThree.current);
+    clearInterval(timerBarWidthFour.current);
+    document.getElementsByClassName("clueTimeBarOne")[0].style.transition =
+      "none";
+    document.getElementsByClassName("clueTimeBarTwo")[0].style.transition =
+      "none";
+    document.getElementsByClassName("clueTimeBarThree")[0].style.transition =
+      "none";
+    document.getElementsByClassName("clueTimeBarFour")[0].style.transition =
+      "none";
   };
 
   const questionAnswer = () => {
@@ -40,10 +52,38 @@ function QuestionScreen({ setQuestionChosen, connectionQ }) {
 
   useEffect(() => {
     widthAnimationBox.current = setTimeout(() => {
-      document.getElementsByClassName("timerBar")[0].style.width = "0px";
+      document.getElementsByClassName("clueTimeBarOne")[0].style.width =
+        "200px";
     });
+    timerBarWidthTwo.current = setTimeout(() => {
+      document.getElementsByClassName("clueTimeBarTwo")[0].style.visibility =
+        "visible";
+      document.getElementsByClassName("clueTimeBarTwo")[0].style.width =
+        "200px";
+      document.getElementsByClassName("clueTimeBarOne")[0].style.visibility =
+        "hidden";
+    }, 10000);
+    timerBarWidthThree.current = setTimeout(() => {
+      document.getElementsByClassName("clueTimeBarThree")[0].style.visibility =
+        "visible";
+      document.getElementsByClassName("clueTimeBarThree")[0].style.width =
+        "200px";
+      document.getElementsByClassName("clueTimeBarTwo")[0].style.visibility =
+        "hidden";
+    }, 20000);
+    timerBarWidthFour.current = setTimeout(() => {
+      document.getElementsByClassName("clueTimeBarFour")[0].style.visibility =
+        "visible";
+      document.getElementsByClassName("clueTimeBarFour")[0].style.width =
+        "200px";
+      document.getElementsByClassName("clueTimeBarThree")[0].style.visibility =
+        "hidden";
+    }, 30000);
     return () => {
       clearInterval(widthAnimationBox.current);
+      clearInterval(timerBarWidthTwo.current);
+      clearInterval(timerBarWidthThree.current);
+      clearInterval(timerBarWidthFour.current);
     };
   }, []);
 
@@ -55,7 +95,7 @@ function QuestionScreen({ setQuestionChosen, connectionQ }) {
         .getElementsByClassName("clue")
         [element].getElementsByTagName("button")[0]
         .getElementsByTagName("span")[0].style.display = "inline";
-    }, 5000));
+    }, 10000));
     if (timeByPoints === 1) {
       clearInterval(myTime);
       setElement(1);
@@ -68,23 +108,37 @@ function QuestionScreen({ setQuestionChosen, connectionQ }) {
   return (
     <>
       <div className="roundOne">
-        <div className="timerBar">
-          <div className="pointInfo">
-            {timeByPoints}
-            {timeByPoints > 1 ? " points" : " point"}
-          </div>
-        </div>
         <div className="QuestionScreen">
           <div className="clue">
+            <div className="clueTimeBarOne">
+              {" "}
+              {timeByPoints}
+              {timeByPoints > 1 ? " points" : " point"}
+            </div>
             <Button type="primary">{connectionQ.clue1}</Button>
           </div>
           <div className="clue">
+            <div className="clueTimeBarTwo">
+              {" "}
+              {timeByPoints}
+              {timeByPoints > 1 ? " points" : " point"}
+            </div>
             <Button type="primary">{connectionQ.clue2}</Button>
           </div>
           <div className="clue">
+            <div className="clueTimeBarThree">
+              {" "}
+              {timeByPoints}
+              {timeByPoints > 1 ? " points" : " point"}
+            </div>
             <Button type="primary">{connectionQ.clue3}</Button>
           </div>
           <div className="clue">
+            <div className="clueTimeBarFour">
+              {" "}
+              {timeByPoints}
+              {timeByPoints > 1 ? " points" : " point"}
+            </div>
             <Button type="primary">{connectionQ.clue4}</Button>
           </div>
         </div>
