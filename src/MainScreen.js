@@ -12,7 +12,7 @@ function MainScreen() {
         </div>
         <div className="contestant">
           <img src={userImg}></img>
-          Captain
+          Player 2
         </div>
         <div className="contestant">
           <img src={userImg}></img>

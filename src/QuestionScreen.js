@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from "react";
 import { Button } from "antd";
 import { useState } from "react";
 
-function QuestionScreen({ setQuestionChosen, connectionQ }) {
+function QuestionScreen({ setQuestionChosen, connectionQ, setPoints }) {
   const [clueConnection, setClueConnection] = useState("");
   const [timeByPoints, setTimeByPoints] = useState(5);
   const [element, setElement] = useState(1);
@@ -16,6 +16,7 @@ function QuestionScreen({ setQuestionChosen, connectionQ }) {
 
   const newQuestion = () => {
     setQuestionChosen(false);
+    setPoints((prev) => prev + timeByPoints);
   };
 
   const stopAnswer = () => {

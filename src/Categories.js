@@ -7,21 +7,21 @@ import werewolfImg from "./Images/werewolf.png";
 import cyclopsImg from "./Images/cyclops.png";
 import santelmoImg from "./Images/santelmo.png";
 import { Button } from "antd";
-import { useState } from "react";
 
 function Categories({ setQuestionChosen, setQuestion, nonChosenQuestions }) {
   if (nonChosenQuestions.length === 0) {
     return (
-      <div>
-        <h1>You've answered all the questions!</h1>
+      <div className="finitto">
+        All THE QUESTIONS ANSWERED! It is time for round 2.
       </div>
     );
   }
-  console.log(nonChosenQuestions);
+
   const chooseCategory = () => {
     const randomQuestion =
       nonChosenQuestions[Math.floor(Math.random() * nonChosenQuestions.length)];
-    nonChosenQuestions.splice(randomQuestion.questionId - 1, 1);
+    const index = nonChosenQuestions.indexOf(randomQuestion);
+    nonChosenQuestions.splice(index, 1);
     setQuestion(randomQuestion);
     setTimeout(() => {
       setQuestionChosen(true);

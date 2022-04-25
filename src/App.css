@@ -124,3 +124,15 @@
 .clueTimeBarTwo, .clueTimeBarThree, .clueTimeBarFour{
   visibility: hidden;
 }
+
+.totalPoints, .finitto{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.finitto{
+  margin-top: 100px;
+}
