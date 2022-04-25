@@ -12,7 +12,7 @@
 
 :white_check_mark: Her kutucuğun süresi belli
 
-- [ ] Sıra hangi kutucuktaysa onun üzerinde puanı yazsın ve progress time bar şeklinde süresi olsun
+:white_check_mark: Sıra hangi kutucuktaysa onun üzerinde puanı yazsın ve progress time bar şeklinde süresi olsun
 ### İkinci Aşama Oyun Ekranı (V2 ile gelebilir)
 - [ ] Codenames tarzında bir ekran
 - [ ] Her tıklamada renk değiştir. Renk şeması sabit.
@@ -23,7 +23,9 @@
 - [ ] Tüm oyuncuların söyleme hakkı olacağı için buton ya da tuş ekleyerek önce kim bastı onu anla.
 - [ ] Her yanlış cevapta sıra rakibe mi geçiyor ona bir bak.
 ### Mantıksal ya da Akış Olarak Yapılması Gerekenler
-- [ ] Puanlama sistemini öğren ve uygula.
+:white_check_mark: Puanlama sistemini öğren ve uygula.
+
+- [ ] Puanlari sistemde tut.
 
 :white_check_mark: Zamanlama olayına kafa yor.
 
@@ -43,3 +45,5 @@ _18.04.2022_ - Hooksa hafif hafif giriş yapıldı. Host için butonlar eklendi.
 _20.04.2022_ - Olmadı bugün. Mantık basit hale döndü ki daha sonra daha fazla bilgi ile gelelim.
 
 _22.04.2022_ - Zaman ve clue component'ları daha düzgün işliyor. Sırada clue bulma kısmına geçebilirim diye düşünüyorum.
+
+_25.04.2022_ - Soru seçme yapısı daha güzel artık. Çünkü questionId eklendi. Cevaplama butonu güncellemesi. Soru seçme ekranına id seçme gibi giriş yapıldı. Seçilen kategoriyi seçmeme olayını eklemeye çalışacağım ama oyunun ana yapısında bile seçilen kategorinin önemi yok. (Çünkü resimli ve müzikli şeyleri koymayacağım başta sonra düşünürüz.)

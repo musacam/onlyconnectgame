@@ -7,15 +7,21 @@ import werewolfImg from "./Images/werewolf.png";
 import cyclopsImg from "./Images/cyclops.png";
 import santelmoImg from "./Images/santelmo.png";
 import { Button } from "antd";
-import { clues } from "./data";
+import { useState } from "react";
 
-function Categories({ setQuestionChosen, setQuestion }) {
-  const questions = Object.values(clues);
-
+function Categories({ setQuestionChosen, setQuestion, nonChosenQuestions }) {
+  if (nonChosenQuestions.length === 0) {
+    return (
+      <div>
+        <h1>You've answered all the questions!</h1>
+      </div>
+    );
+  }
+  console.log(nonChosenQuestions);
   const chooseCategory = () => {
     const randomQuestion =
-      questions[Math.floor(Math.random() * questions.length)];
-    console.log(randomQuestion);
+      nonChosenQuestions[Math.floor(Math.random() * nonChosenQuestions.length)];
+    nonChosenQuestions.splice(randomQuestion.questionId - 1, 1);
     setQuestion(randomQuestion);
     setTimeout(() => {
       setQuestionChosen(true);
@@ -24,22 +30,22 @@ function Categories({ setQuestionChosen, setQuestion }) {
   return (
     <div className="categories">
       <div className="subcategory">
-        <Button type="primary" onClick={chooseCategory}>
+        <Button id="1" type="primary" onClick={chooseCategory}>
           <img src={medusaImg}></img>
         </Button>
-        <Button type="primary" onClick={chooseCategory}>
+        <Button id="2" type="primary" onClick={chooseCategory}>
           <img src={griffinImg}></img>
         </Button>
-        <Button type="primary" onClick={chooseCategory}>
+        <Button id="3" type="primary" onClick={chooseCategory}>
           <img src={unicornImg}></img>
         </Button>
-        <Button type="primary" onClick={chooseCategory}>
+        <Button id="4" type="primary" onClick={chooseCategory}>
           <img src={werewolfImg}></img>
         </Button>
-        <Button type="primary" onClick={chooseCategory}>
+        <Button id="5" type="primary" onClick={chooseCategory}>
           <img src={cyclopsImg}></img>
         </Button>
-        <Button type="primary" onClick={chooseCategory}>
+        <Button id="6" type="primary" onClick={chooseCategory}>
           <img src={santelmoImg}></img>
         </Button>
       </div>

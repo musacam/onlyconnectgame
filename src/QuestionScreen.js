@@ -7,6 +7,7 @@ function QuestionScreen({ setQuestionChosen, connectionQ }) {
   const [clueConnection, setClueConnection] = useState("");
   const [timeByPoints, setTimeByPoints] = useState(5);
   const [element, setElement] = useState(1);
+  const [answered, setAnswered] = useState(false);
   const timer = useRef(null);
   const widthAnimationBox = useRef(null);
   const timerBarWidthTwo = useRef(null);
@@ -31,6 +32,7 @@ function QuestionScreen({ setQuestionChosen, connectionQ }) {
       "none";
     document.getElementsByClassName("clueTimeBarFour")[0].style.transition =
       "none";
+    setAnswered(true);
   };
 
   const questionAnswer = () => {
@@ -47,7 +49,6 @@ function QuestionScreen({ setQuestionChosen, connectionQ }) {
       .getElementsByClassName("clue")[3]
       .getElementsByTagName("button")[0]
       .getElementsByTagName("span")[0].style.display = "inline";
-    document.getElementsByClassName("timerBar")[0].style.display = "none";
   };
 
   useEffect(() => {
@@ -163,6 +164,7 @@ function QuestionScreen({ setQuestionChosen, connectionQ }) {
           type="primary"
           style={{ backgroundColor: "rgba(60, 164, 0, 0.612)" }}
           onClick={questionAnswer}
+          disabled={!answered}
         >
           Answer!
         </Button>
