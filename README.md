@@ -1,51 +1,43 @@
 # Welcome to the Only Connect game
-## TODO LIST
-### İlk Aşama Oyun Ekranı
-##### Oyun Seçim Ana Ekranı
-:white_check_mark: 3 kullanıcının da olduğu üst ana ekran
 
-:white_check_mark: Ekranın alt kısmı 6 kutulu, kutunun içi enteresan resimler
-##### Oyun Seçtikten Sonra
-:white_check_mark: Oyuncu ekranı sabit kalmaya devam
+Note to everyone who visits this repository: I am really good at CSS. I promise you. But I just didn't care in this repo that much.
 
-:white_check_mark: 4 kutucuklu yer ayır
+Let's get started our tour.
 
-:white_check_mark: Her kutucuğun süresi belli
+### What's this repository/game?
+Do you ever watched legendary British tv show Only Connect. Yeah that's it. But waaaay more simpler version. Because I am doing this project only before waiting for dinner.
 
-:white_check_mark: Sıra hangi kutucuktaysa onun üzerinde puanı yazsın ve progress time bar şeklinde süresi olsun
-### İkinci Aşama Oyun Ekranı (V2 ile gelebilir)
-- [ ] Codenames tarzında bir ekran
-- [ ] Her tıklamada renk değiştir. Renk şeması sabit.
-- [ ] Doğru dörtlü oluşturulduğunda en üst sıraya al.
-- [ ] Son 2 satır (son 2 grup eşleştirmesi) kaldığında grubun 3 hakkı olacak.
-### Üçüncü Aşama Oyun Ekranı (V2 ya da V3)
-- [ ] İnce uzun iki satırlı kutucuk
-- [ ] Tüm oyuncuların söyleme hakkı olacağı için buton ya da tuş ekleyerek önce kim bastı onu anla.
-- [ ] Her yanlış cevapta sıra rakibe mi geçiyor ona bir bak.
-### Mantıksal ya da Akış Olarak Yapılması Gerekenler
-:white_check_mark: Puanlama sistemini öğren ve uygula.
+### What can we expect from this project?
+Well... I am trying to polish basic first round of the game. If I am quick enough I will be adding second and third rounds to the game.
 
-- [ ] Puanlari sistemde tut.
+### How can I play this game? What is the objective?
+Game is actually simple. You are just going to choose category from the screen. At this very first stages it doesn't matter which one you choose but in the future it will be. (Wait for the new versions/updates)
 
-:white_check_mark: Zamanlama olayına kafa yor.
+After that main goal you have to find the connection of clues based on the clues that you are going to see every 10 seconds. You might want to be quick. Because every new clue will decrease the points that you are going to recieve.
 
-- [ ] Oyunla alakalı verileri topla. Gerekirse sen yap.
-- [ ] Oyuncuların olduğu ekran için avatar seçme olayı olsun eğlenceli olur.
+If you can find the clue just inform the host. (Yeah there will be a host in this game otherwise how can you decide whether the answer is true or not)
 
-:white_check_mark: E birisinin bunları yönetmesi lazım.
+Then repeat the process and don't forget to have fun.
 
-### Zaman Yönetimi
+### What are the clues and connections can you give me an example?
 
-_15.04.2022_ - Ana ekrana giriş yapıldı, enteresan resimleri bulduk, daha da güzelleştirmeler yapılacak. 
+Yes sir.
 
-_17.04.2022_ - Sayfalar ve yapılar farklı componentlara ayrıldı. Clue sayfasının temel hâli yapıldı. Kategoriden clue kısmına geçiş için şimdilik buton eklendi.
+![Game Example](./public/game-example.png)
 
-_18.04.2022_ - Hooksa hafif hafif giriş yapıldı. Host için butonlar eklendi. Todolar çıkarıldı. Timer mantığına giriş yapıldı.
+First clue Non-urgent crime is 101 -> 1+0+1 = 2
 
-_20.04.2022_ - Olmadı bugün. Mantık basit hale döndü ki daha sonra daha fazla bilgi ile gelelim.
+Second clue EU Emergency Services is 112 -> 1+1+2 = 4
 
-_22.04.2022_ - Zaman ve clue component'ları daha düzgün işliyor. Sırada clue bulma kısmına geçebilirim diye düşünüyorum.
+Third clue Speaking Clock is 123 is 123 -> 1+2+3 = 6
 
-_25.04.2022_ - Soru seçme yapısı daha güzel artık. Çünkü questionId eklendi. Cevaplama butonu güncellemesi. Soru seçme ekranına id seçme gibi giriş yapıldı. Seçilen kategoriyi seçmeme olayını eklemeye çalışacağım ama oyunun ana yapısında bile seçilen kategorinin önemi yok. (Çünkü resimli ve müzikli şeyleri koymayacağım başta sonra düşünürüz.)
+Fourth clue UK Emergency Services is 999 -> 9+9+9 = 27
 
-_27.04.2022_ - Birkaç yeni data eklendi. Turn sistemi eklendi. Puanlama eklendi. Butonların çalışma yapısı güncellendi.
+
+Connection of all these clues you are adding up digits of phone numbers related of the clues.
+
+#### How can I play or see the project development?
+This project is under development. So it will be constantly updated. If you want to run and see this project just clone the project, install npm packages by ```npm install``` and run with ```npm start``` commands.
+
+## DEEP NOTES
+Clues and connections are Turkish because I am testing this game with my friends. Sorry for irrelevancy because this readme is English.
