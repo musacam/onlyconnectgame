@@ -13,10 +13,15 @@ function App() {
   const [question, setQuestion] = useState(null);
   const [nonChosenQuestions, setNonChosenQuestions] = useState(questions);
   const [points, setPoints] = useState(0);
+  const [playersPointsArray, setPlayersPointsArray] = useState([0, 0, 0]);
+  const [playerTurnArray, setPlayerTurnArray] = useState([false, false, false]);
 
   return (
     <div className="App">
-      <MainScreen />
+      <MainScreen
+        playersPointsArray={playersPointsArray}
+        setPlayerTurnArray={setPlayerTurnArray}
+      />
       <Points points={points} />
       {!questionChosen ? (
         <Categories
@@ -29,6 +34,8 @@ function App() {
           setQuestionChosen={setQuestionChosen}
           connectionQ={question}
           setPoints={setPoints}
+          setPlayersPointsArray={setPlayersPointsArray}
+          playerTurnArray={playerTurnArray}
         />
       )}
     </div>

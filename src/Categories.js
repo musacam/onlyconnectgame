@@ -12,7 +12,7 @@ function Categories({ setQuestionChosen, setQuestion, nonChosenQuestions }) {
   if (nonChosenQuestions.length === 0) {
     return (
       <div className="finitto">
-        All THE QUESTIONS ANSWERED! It is time for round 2.
+        All THE QUESTIONS ANSWERED! Wait for me to develop this app more.
       </div>
     );
   }

@@ -47,3 +47,5 @@ _20.04.2022_ - Olmadı bugün. Mantık basit hale döndü ki daha sonra daha faz
 _22.04.2022_ - Zaman ve clue component'ları daha düzgün işliyor. Sırada clue bulma kısmına geçebilirim diye düşünüyorum.
 
 _25.04.2022_ - Soru seçme yapısı daha güzel artık. Çünkü questionId eklendi. Cevaplama butonu güncellemesi. Soru seçme ekranına id seçme gibi giriş yapıldı. Seçilen kategoriyi seçmeme olayını eklemeye çalışacağım ama oyunun ana yapısında bile seçilen kategorinin önemi yok. (Çünkü resimli ve müzikli şeyleri koymayacağım başta sonra düşünürüz.)
+
+_27.04.2022_ - Birkaç yeni data eklendi. Turn sistemi eklendi. Puanlama eklendi. Butonların çalışma yapısı güncellendi.

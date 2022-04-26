@@ -2,12 +2,20 @@
 import React, { useEffect, useRef } from "react";
 import { Button } from "antd";
 import { useState } from "react";
+import MainScreen from "./MainScreen";
 
-function QuestionScreen({ setQuestionChosen, connectionQ, setPoints }) {
+function QuestionScreen({
+  setQuestionChosen,
+  connectionQ,
+  setPoints,
+  setPlayersPointsArray,
+  playerTurnArray,
+}) {
   const [clueConnection, setClueConnection] = useState("");
   const [timeByPoints, setTimeByPoints] = useState(5);
   const [element, setElement] = useState(1);
   const [answered, setAnswered] = useState(false);
+  const [correctAnswer, setCorrectAnswer] = useState(true);
   const timer = useRef(null);
   const widthAnimationBox = useRef(null);
   const timerBarWidthTwo = useRef(null);
@@ -16,7 +24,30 @@ function QuestionScreen({ setQuestionChosen, connectionQ, setPoints }) {
 
   const newQuestion = () => {
     setQuestionChosen(false);
+  };
+
+  const trueAnswer = () => {
+    if (playerTurnArray[0] === true) {
+      setPlayersPointsArray((prev) => [
+        prev[0] + timeByPoints,
+        prev[1],
+        prev[2],
+      ]);
+    } else if (playerTurnArray[1] === true) {
+      setPlayersPointsArray((prev) => [
+        prev[0],
+        prev[1] + timeByPoints,
+        prev[2],
+      ]);
+    } else if (playerTurnArray[2] === true) {
+      setPlayersPointsArray((prev) => [
+        prev[0],
+        prev[1],
+        prev[2] + timeByPoints,
+      ]);
+    }
     setPoints((prev) => prev + timeByPoints);
+    setCorrectAnswer(false);
   };
 
   const stopAnswer = () => {
@@ -151,6 +182,7 @@ function QuestionScreen({ setQuestionChosen, connectionQ, setPoints }) {
           type="primary"
           style={{ backgroundColor: "rgba(60, 164, 200, 0.612)" }}
           onClick={newQuestion}
+          disabled={!answered}
         >
           New Question
         </Button>
@@ -163,11 +195,20 @@ function QuestionScreen({ setQuestionChosen, connectionQ, setPoints }) {
         </Button>
         <Button
           type="primary"
-          style={{ backgroundColor: "rgba(60, 164, 0, 0.612)" }}
+          style={{ backgroundColor: "rgba(200, 164, 0, 0.612)" }}
           onClick={questionAnswer}
           disabled={!answered}
         >
-          Answer!
+          What is the answer?
+        </Button>
+        <Button
+          id="correctAnswer"
+          type="primary"
+          style={{ backgroundColor: "rgba(60, 164, 0, 0.612)" }}
+          onClick={trueAnswer}
+          disabled={!answered || !correctAnswer}
+        >
+          Correct Answer!
         </Button>
       </div>
     </>

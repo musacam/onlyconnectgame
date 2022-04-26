@@ -63,4 +63,28 @@ export const clues = [
     clue4: "Şempanze - %96",
     questionId: 8,
   },
+  {
+    connection: "Elementler ve sembolleri",
+    clue1: "1,5 Radon",
+    clue2: "1,4 Terbiyum",
+    clue3: "1,3 Magnezyum",
+    clue4: "1,2 Helyum",
+    questionId: 9,
+  },
+  {
+    connection: "Dart tahtası puanları ve konumları",
+    clue1: "Doğu 6",
+    clue2: "Güney 3",
+    clue3: "Batı 11",
+    clue4: "Kuzey 20",
+    questionId: 10,
+  },
+  {
+    connection: "Sessiz harfsiz kıtalar (Ei ai ıaa)",
+    clue1: "Aa",
+    clue2: "Aua",
+    clue3: "Aaia",
+    clue4: "Ue Aia",
+    questionId: 11,
+  },
 ];
