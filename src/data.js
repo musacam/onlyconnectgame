@@ -87,4 +87,28 @@ export const clues = [
     clue4: "Ue Aia",
     questionId: 11,
   },
+  {
+    connection: "Gözbebekleri şekilleri",
+    clue1: "At - -",
+    clue2: "Mürekkep Balığı w w",
+    clue3: "İnsan o o",
+    clue4: "Kedi | |",
+    questionId: 12,
+  },
+  {
+    connection: "Gözbebekleri şekilleri",
+    clue1: "At - -",
+    clue2: "Mürekkep Balığı w w",
+    clue3: "İnsan o o",
+    clue4: "Kedi | |",
+    questionId: 13,
+  },
+  {
+    connection: "Gece yarısına 1000,100,10,1 dakika kala zamanlar",
+    clue1: "7.20 A.M.",
+    clue2: "10.20 A.M.",
+    clue3: "11.50 P.M.",
+    clue4: "11.59 P.M.",
+    questionId: 14,
+  },
 ];

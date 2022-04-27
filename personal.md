@@ -25,12 +25,12 @@
 ### Mantıksal ya da Akış Olarak Yapılması Gerekenler
 :white_check_mark: Puanlama sistemini öğren ve uygula.
 
-- [ ] Puanlari sistemde tut.
+:white_check_mark: Puanlari sistemde tut.
 
 :white_check_mark: Zamanlama olayına kafa yor.
 
 - [ ] Oyunla alakalı verileri topla. Gerekirse sen yap.
-- [ ] Oyuncuların olduğu ekran için avatar seçme olayı olsun eğlenceli olur.
+- [ ] Oyuncuların olduğu ekran için avatar seçme veya kamera olayı olsun eğlenceli olur.
 
 :white_check_mark: E birisinin bunları yönetmesi lazım.
 
@@ -49,3 +49,5 @@ _22.04.2022_ - Zaman ve clue component'ları daha düzgün işliyor. Sırada clu
 _25.04.2022_ - Soru seçme yapısı daha güzel artık. Çünkü questionId eklendi. Cevaplama butonu güncellemesi. Soru seçme ekranına id seçme gibi giriş yapıldı. Seçilen kategoriyi seçmeme olayını eklemeye çalışacağım ama oyunun ana yapısında bile seçilen kategorinin önemi yok. (Çünkü resimli ve müzikli şeyleri koymayacağım başta sonra düşünürüz.)
 
 _27.04.2022_ - Birkaç yeni data eklendi. Turn sistemi eklendi. Puanlama eklendi. Butonların çalışma yapısı güncellendi.
+
+_28.04.2022_ - Birkaç yeni data eklendi. Buton görünme yapıları ve kategori seçilme yapıları güncellendi.

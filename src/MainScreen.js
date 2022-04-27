@@ -4,27 +4,35 @@ import userImg from "./Images/user.png";
 import { Button } from "antd";
 import { useState } from "react";
 
-function MainScreen({ playersPointsArray, setPlayerTurnArray }) {
+function MainScreen({
+  playersPointsArray,
+  setPlayerTurnArray,
+  questionChosen,
+}) {
   const [flagTurnOne, setFlagTurnOne] = useState(false);
   const [flagTurnTwo, setFlagTurnTwo] = useState(false);
   const [flagTurnThree, setFlagTurnThree] = useState(false);
+  const [turnsResetted, setTurnsResetted] = useState(true);
 
   const playerOneTurn = () => {
     setPlayerTurnArray([true, false, false]);
     setFlagTurnTwo(true);
     setFlagTurnThree(true);
+    setTurnsResetted(false);
   };
 
   const playerTwoTurn = () => {
     setPlayerTurnArray([false, true, false]);
     setFlagTurnOne(true);
     setFlagTurnThree(true);
+    setTurnsResetted(false);
   };
 
   const playerThreeTurn = () => {
     setPlayerTurnArray([false, false, true]);
     setFlagTurnOne(true);
     setFlagTurnTwo(true);
+    setTurnsResetted(false);
   };
 
   const resetTurns = () => {
@@ -32,6 +40,7 @@ function MainScreen({ playersPointsArray, setPlayerTurnArray }) {
     setFlagTurnOne(false);
     setFlagTurnTwo(false);
     setFlagTurnThree(false);
+    setTurnsResetted(true);
   };
 
   return (
@@ -43,14 +52,16 @@ function MainScreen({ playersPointsArray, setPlayerTurnArray }) {
             <div>
               <h3>Player 1</h3>
             </div>
-            <Button
-              id="playerOne"
-              onClick={playerOneTurn}
-              style={{ height: 30, marginBottom: 10 }}
-              disabled={flagTurnOne}
-            >
-              Me! Me! Me!
-            </Button>
+            {questionChosen ? (
+              <Button
+                id="playerOne"
+                onClick={playerOneTurn}
+                style={{ height: 30, marginBottom: 10 }}
+                disabled={flagTurnOne}
+              >
+                Me! Me! Me!
+              </Button>
+            ) : null}
             <span>{playersPointsArray[0]}</span>
           </div>
           <div className="contestant">
@@ -58,14 +69,16 @@ function MainScreen({ playersPointsArray, setPlayerTurnArray }) {
             <div>
               <h3>Player 2</h3>
             </div>
-            <Button
-              id="playerTwo"
-              onClick={playerTwoTurn}
-              style={{ height: 30, marginBottom: 10 }}
-              disabled={flagTurnTwo}
-            >
-              Me! Me! Me!
-            </Button>
+            {questionChosen ? (
+              <Button
+                id="playerTwo"
+                onClick={playerTwoTurn}
+                style={{ height: 30, marginBottom: 10 }}
+                disabled={flagTurnTwo}
+              >
+                Me! Me! Me!
+              </Button>
+            ) : null}
             <span>{playersPointsArray[1]}</span>
           </div>
           <div className="contestant">
@@ -73,19 +86,26 @@ function MainScreen({ playersPointsArray, setPlayerTurnArray }) {
             <div>
               <h3>Player 3</h3>
             </div>
-            <Button
-              id="playerThree"
-              onClick={playerThreeTurn}
-              style={{ height: 30, marginBottom: 10 }}
-              disabled={flagTurnThree}
-            >
-              Me! Me! Me!
-            </Button>
+            {questionChosen ? (
+              <Button
+                id="playerThree"
+                onClick={playerThreeTurn}
+                style={{ height: 30, marginBottom: 10 }}
+                disabled={flagTurnThree}
+              >
+                Me! Me! Me!
+              </Button>
+            ) : null}
             <span>{playersPointsArray[2]}</span>
           </div>
         </div>
+        {!turnsResetted ? "You need to reset turns before next round!" : null}
         <div className="buttonReset">
-          <Button type="primary" onClick={resetTurns}>
+          <Button
+            type="primary"
+            onClick={resetTurns}
+            style={{ backgroundColor: "pink" }}
+          >
             Reset Turns
           </Button>
         </div>
