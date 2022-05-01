@@ -51,3 +51,5 @@ _25.04.2022_ - Soru seçme yapısı daha güzel artık. Çünkü questionId ekle
 _27.04.2022_ - Birkaç yeni data eklendi. Turn sistemi eklendi. Puanlama eklendi. Butonların çalışma yapısı güncellendi.
 
 _28.04.2022_ - Birkaç yeni data eklendi. Buton görünme yapıları ve kategori seçilme yapıları güncellendi.
+
+_01.05.2022_ - Birkaç yeni data eklendi. Çok şey eklendi. Footer, popup, turn base iyileştirmesi ve daha bir sürü şey.
