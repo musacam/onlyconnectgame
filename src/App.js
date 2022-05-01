@@ -3,7 +3,7 @@ import "./App.css";
 import Categories from "./Categories";
 import MainScreen from "./MainScreen";
 import QuestionScreen from "./QuestionScreen";
-import Points from "./Points";
+import Footer from "./Footer";
 import { useState } from "react";
 import { clues } from "./data";
 
@@ -23,6 +23,10 @@ function App() {
     false,
     false,
   ]);
+  const [flagTurnOne, setFlagTurnOne] = useState(false);
+  const [flagTurnTwo, setFlagTurnTwo] = useState(false);
+  const [flagTurnThree, setFlagTurnThree] = useState(false);
+  const [turnsResetted, setTurnsResetted] = useState(true);
 
   return (
     <div className="App">
@@ -30,8 +34,15 @@ function App() {
         playersPointsArray={playersPointsArray}
         setPlayerTurnArray={setPlayerTurnArray}
         questionChosen={questionChosen}
+        setFlagTurnOne={setFlagTurnOne}
+        setFlagTurnTwo={setFlagTurnTwo}
+        setFlagTurnThree={setFlagTurnThree}
+        setTurnsResetted={setTurnsResetted}
+        flagTurnOne={flagTurnOne}
+        flagTurnTwo={flagTurnTwo}
+        flagTurnThree={flagTurnThree}
+        turnsResetted={turnsResetted}
       />
-      <Points points={points} />
       {!questionChosen ? (
         <Categories
           setQuestionChosen={setQuestionChosen}
@@ -39,6 +50,7 @@ function App() {
           nonChosenQuestions={nonChosenQuestions}
           setChosenOnes={setChosenOnes}
           chosenOnes={chosenOnes}
+          turnsResetted={turnsResetted}
         />
       ) : (
         <QuestionScreen
@@ -47,8 +59,12 @@ function App() {
           setPoints={setPoints}
           setPlayersPointsArray={setPlayersPointsArray}
           playerTurnArray={playerTurnArray}
+          flagTurnOne={flagTurnOne}
+          flagTurnTwo={flagTurnTwo}
+          flagTurnThree={flagTurnThree}
         />
       )}
+      <Footer />
     </div>
   );
 }

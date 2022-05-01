@@ -10,6 +10,9 @@ function QuestionScreen({
   setPoints,
   setPlayersPointsArray,
   playerTurnArray,
+  flagTurnOne,
+  flagTurnTwo,
+  flagTurnThree,
 }) {
   const [clueConnection, setClueConnection] = useState("");
   const [timeByPoints, setTimeByPoints] = useState(5);
@@ -25,6 +28,16 @@ function QuestionScreen({
   const newQuestion = () => {
     setQuestionChosen(false);
   };
+
+  useEffect(() => {
+    if (
+      flagTurnOne === true ||
+      flagTurnTwo === true ||
+      flagTurnThree === true
+    ) {
+      stopAnswer();
+    }
+  }, [flagTurnOne, flagTurnTwo, flagTurnThree]);
 
   const trueAnswer = () => {
     if (playerTurnArray[0] === true) {

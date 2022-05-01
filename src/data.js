@@ -111,4 +111,20 @@ export const clues = [
     clue4: "11.59 P.M.",
     questionId: 14,
   },
+  {
+    connection: "Ülke içinde ülke",
+    clue1: "FmcR",
+    clue2: "IvaT",
+    clue3: "IsmT",
+    clue4: "ZlsA",
+    questionId: 15,
+  },
+  {
+    connection: "Gece yarısına 1000,100,10,1 dakika kala zamanlar",
+    clue1: "7.20 A.M.",
+    clue2: "10.20 A.M.",
+    clue3: "11.50 P.M.",
+    clue4: "11.59 P.M.",
+    questionId: 16,
+  },
 ];

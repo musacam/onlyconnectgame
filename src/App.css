@@ -71,7 +71,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  flex: 0.3;
+  flex: 0.2;
 }
 
 .QuestionScreen{
@@ -138,4 +138,28 @@
 
 .finitto{
   margin-top: 100px;
+}
+
+.footer{
+  background-color: rgb(4, 39, 76);
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  position: fixed;
+  bottom: 0;
+}
+
+.informationButton{
+  position: absolute;
+  right: 10px;
+  height: 50px;
+}
+
+.modal {
+  font-size: 15px;
+}
+
+.modal > .content {
+  width: 100%;
+  padding: 10px 5px;
 }

@@ -3,17 +3,21 @@ import React from "react";
 import userImg from "./Images/user.png";
 import { Button } from "antd";
 import { useState } from "react";
+import PopupInfo from "./PopupInfo";
 
 function MainScreen({
   playersPointsArray,
   setPlayerTurnArray,
   questionChosen,
+  setFlagTurnOne,
+  setFlagTurnTwo,
+  setFlagTurnThree,
+  setTurnsResetted,
+  flagTurnOne,
+  flagTurnTwo,
+  flagTurnThree,
+  turnsResetted,
 }) {
-  const [flagTurnOne, setFlagTurnOne] = useState(false);
-  const [flagTurnTwo, setFlagTurnTwo] = useState(false);
-  const [flagTurnThree, setFlagTurnThree] = useState(false);
-  const [turnsResetted, setTurnsResetted] = useState(true);
-
   const playerOneTurn = () => {
     setPlayerTurnArray([true, false, false]);
     setFlagTurnTwo(true);
@@ -45,6 +49,9 @@ function MainScreen({
 
   return (
     <>
+      <div className="informationButton">
+        <PopupInfo />
+      </div>
       <div className="contestants">
         <div className="realContestants">
           <div className="contestant">
@@ -101,13 +108,15 @@ function MainScreen({
         </div>
         {!turnsResetted ? "You need to reset turns before next round!" : null}
         <div className="buttonReset">
-          <Button
-            type="primary"
-            onClick={resetTurns}
-            style={{ backgroundColor: "pink" }}
-          >
-            Reset Turns
-          </Button>
+          {!turnsResetted && (
+            <Button
+              type="primary"
+              onClick={resetTurns}
+              style={{ backgroundColor: "pink" }}
+            >
+              Reset Turns
+            </Button>
+          )}
         </div>
       </div>
     </>
