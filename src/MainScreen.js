@@ -2,7 +2,6 @@
 import React from "react";
 import userImg from "./Images/user.png";
 import { Button } from "antd";
-import { useState } from "react";
 import PopupInfo from "./PopupInfo";
 
 function MainScreen({
