@@ -108,7 +108,7 @@ function QuestionScreen({
         "200px";
       document.getElementsByClassName("clueTimeBarOne")[0].style.visibility =
         "hidden";
-    }, 10000);
+    }, 7500);
     timerBarWidthThree.current = setTimeout(() => {
       document.getElementsByClassName("clueTimeBarThree")[0].style.visibility =
         "visible";
@@ -116,7 +116,7 @@ function QuestionScreen({
         "200px";
       document.getElementsByClassName("clueTimeBarTwo")[0].style.visibility =
         "hidden";
-    }, 20000);
+    }, 15000);
     timerBarWidthFour.current = setTimeout(() => {
       document.getElementsByClassName("clueTimeBarFour")[0].style.visibility =
         "visible";
@@ -124,7 +124,7 @@ function QuestionScreen({
         "200px";
       document.getElementsByClassName("clueTimeBarThree")[0].style.visibility =
         "hidden";
-    }, 30000);
+    }, 22500);
     return () => {
       clearInterval(widthAnimationBox.current);
       clearInterval(timerBarWidthTwo.current);
@@ -141,7 +141,7 @@ function QuestionScreen({
         .getElementsByClassName("clue")
         [element].getElementsByTagName("button")[0]
         .getElementsByTagName("span")[0].style.display = "inline";
-    }, 10000));
+    }, 7500));
     if (timeByPoints === 1) {
       clearInterval(myTime);
       setElement(1);

@@ -90,18 +90,10 @@ export const clues = [
   {
     connection: "Gözbebekleri şekilleri",
     clue1: "At - -",
-    clue2: "Mürekkep Balığı w w",
+    clue2: "Mürekkepbalığı w w",
     clue3: "İnsan o o",
     clue4: "Kedi | |",
     questionId: 12,
-  },
-  {
-    connection: "Gözbebekleri şekilleri",
-    clue1: "At - -",
-    clue2: "Mürekkep Balığı w w",
-    clue3: "İnsan o o",
-    clue4: "Kedi | |",
-    questionId: 13,
   },
   {
     connection: "Gece yarısına 1000,100,10,1 dakika kala zamanlar",
@@ -109,7 +101,7 @@ export const clues = [
     clue2: "10.20 A.M.",
     clue3: "11.50 P.M.",
     clue4: "11.59 P.M.",
-    questionId: 14,
+    questionId: 13,
   },
   {
     connection: "Ülke içinde ülke",
@@ -117,7 +109,7 @@ export const clues = [
     clue2: "IvaT",
     clue3: "IsmT",
     clue4: "ZlsA",
-    questionId: 15,
+    questionId: 14,
   },
   {
     connection: "Gece yarısına 1000,100,10,1 dakika kala zamanlar",
@@ -125,6 +117,22 @@ export const clues = [
     clue2: "10.20 A.M.",
     clue3: "11.50 P.M.",
     clue4: "11.59 P.M.",
+    questionId: 15,
+  },
+  {
+    connection: "Yemek adıyla şarkı yapmış olan sanatçılar",
+    clue1: "Barış Manço",
+    clue2: "Tarık Mengüç",
+    clue3: "Mirkelam",
+    clue4: "Atilla Taş",
     questionId: 16,
   },
+  // {
+  //   connection: "",
+  //   clue1: "",
+  //   clue2: "",
+  //   clue3: "",
+  //   clue4: "",
+  //   questionId: 17,
+  // },
 ];
