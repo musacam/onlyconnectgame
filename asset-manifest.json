@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/onlyconnectgame/static/css/main.35511c17.css",
+    "main.js": "/onlyconnectgame/static/js/main.f93baedc.js",
+    "static/media/werewolf.png": "/onlyconnectgame/static/media/werewolf.dec56983d9125dc705e2.png",
+    "static/media/santelmo.png": "/onlyconnectgame/static/media/santelmo.f8da25bfce350ada155c.png",
+    "static/media/medusa.png": "/onlyconnectgame/static/media/medusa.ef6e2dc057aa363c61aa.png",
+    "static/media/unicorn.png": "/onlyconnectgame/static/media/unicorn.7f50eb32a0e7503d1df3.png",
+    "static/media/cyclops.png": "/onlyconnectgame/static/media/cyclops.f21905eb9866c71b088b.png",
+    "static/media/griffin.png": "/onlyconnectgame/static/media/griffin.c65d9992671142ad075a.png",
+    "static/media/user.png": "/onlyconnectgame/static/media/user.c920752422c11377083e.png",
+    "index.html": "/onlyconnectgame/index.html",
+    "main.35511c17.css.map": "/onlyconnectgame/static/css/main.35511c17.css.map",
+    "main.f93baedc.js.map": "/onlyconnectgame/static/js/main.f93baedc.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.35511c17.css",
+    "static/js/main.f93baedc.js"
+  ]
+}
